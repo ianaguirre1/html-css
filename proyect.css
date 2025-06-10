@@ -1,0 +1,121 @@
+/* ================================
+   Base Styles
+================================ */
+
+/* Global styles applied to all elements on the page */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Sets default font stack */
+    margin: 0;        /* Removes default body margin */
+    padding: 0;       /* Removes default body padding */
+    box-sizing: border-box; /* Ensures padding/border don't affect element width/height */
+}
+
+/* ================================
+   Header Section
+================================ */
+
+/* Header container with dark background and white text */
+.head_site {
+    background-color: #333;          /* Dark gray background */
+    color: white;                    /* White text */
+    display: flex;                   /* Flexbox layout */
+    justify-content: space-between; /* Space between title and nav */
+    align-items: center;            /* Vertically center items */
+    padding: 10px 20px;             /* Padding inside the header */
+}
+
+/* Navigation list inside the header */
+.nav__list {
+    display: flex;       /* Horizontal list layout */
+    list-style: none;    /* Removes default bullet points */
+}
+
+/* Individual navigation list items */
+.list__sublist {
+    margin: 0 15px;      /* Horizontal spacing between links */
+}
+
+/* Navigation links */
+.sublist__a {
+    color: white;             /* White text */
+    text-decoration: none;    /* Removes underline */
+}
+.sublist__a:hover{
+    color:aqua;
+}
+.grid-item:hover{
+    background-color: aqua;
+    color: orangered;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+/* ================================
+   Main Content Section
+================================ */
+
+/* Main wrapper for page content */
+.main {
+    padding: 20px; /* Adds spacing around content */
+}
+
+/* ================================
+   Grid Layout Section
+================================ */
+
+/* Grid container for service items */
+.grid-container {
+    display: grid; /* Enables CSS Grid layout */
+    grid-template-columns: repeat(3, 4fr); /* 3 equal-width columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Spacing inside the container */
+    justify-content: space-between; /* (Redundant when using grid) */
+}
+
+/* Individual grid items (service cards) */
+.grid-item {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 20px;             /* Internal spacing */
+    border: 1px solid #ccc;    /* Light border */
+    text-align: center;        /* Center text */
+    flex: 1;                   /* (Ignored in grid layout — relevant only in flexbox) */
+}
+
+/* ================================
+   Responsive Design
+================================ */
+
+/* Tablet screens and smaller (≤768px) */
+@media (max-width: 768px) {
+    /* Switch to 2-column layout */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Stack navigation links vertically */
+    .nav__list {
+        flex-direction: column;
+    }
+}
+
+/* Mobile screens and smaller (≤480px) */
+@media (max-width: 480px) {
+    /* Switch to 1-column layout */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stack header content vertically and align left */
+    .head_site {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Stack nav items vertically and align left */
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+    }
+}

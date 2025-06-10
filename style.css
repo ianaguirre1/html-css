@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Sets default font stack */
+    margin: 0;        /* Removes default body margin */
+    padding: 0;       /* Removes default body padding */
+    background-color: #cbcdd3;
+    box-sizing: border-box; /* Ensures padding/border don't affect element width/height */
+}
+.header-site {
+    background-color: #333;          /* Dark gray background */
+    color: white;                    /* White text */
+    display: flex;                   /* Flexbox layout */
+    justify-content: center; /* Space between title and nav */
+    align-items: center;            /* Vertically center items */
+    padding: 10px 20px;             /* Padding inside the header */
+}
+.nav__list {
+    display: flex;       /* Horizontal list layout */
+    list-style: none;    /* Removes default bullet points */
+}
+.list__sublist {
+    margin: 0 15px;      /* Horizontal spacing between links */
+}
+.sublist__a {
+    color: white;             /* White text */
+    text-decoration: none;    /* Removes underline */
+}
+.sublist__a:hover{
+    color: red;
+    transform: rotate(5deg);
+    font-size: 20px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 30px 10px;
+}
+.main__section1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+}
+.main__section2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+.main__section3{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+}
+.main__section4{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+.section__link{
+    text-decoration: none;
+    color: white;
+}
+.section__link:hover{
+    color:red;
+    transform: rotate(5deg);
+    font-size: 20px;
+}
+.main__section img{
+    width: 30px;
+    height: 30px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 80px;
+    padding: 30px 10px;
+    background-color: white;
+}
+.footer__section img:hover{
+    width: 25px;
+}
+.footer__section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__section img{
+    width: 50px;
+    height: 50px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+/* ================================
+   Responsive Design
+================================ */
+
+/* Tablet screens and smaller (≤768px) */
+@media (max-width: 768px) {
+
+    /* Stack navigation links vertically */
+    .nav__list {
+        flex-direction: column;
+    }
+}
+
+/* Mobile screens and smaller (≤480px) */
+@media (max-width: 480px) {
+
+    /* Stack nav items vertically and align left */
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Sets default font stack */
+    margin: 0;        /* Removes default body margin */
+    padding: 0;       /* Removes default body padding */
+    box-sizing: border-box;
+    background-color: #e9ecf4; /* Ensures padding/border don't affect element width/height */
+}
+
+.header{
+    background-color: #333;          /* Dark gray background */
+    color: white;                    /* White text */
+    display: flex;                   /* Flexbox layout */
+    justify-content: space-between; /* Space between title and nav */
+    align-items: center;           /* Vertically center items */
+    padding: 10px 20px;           /* Padding inside the header */
+}
+.presentation__name:hover{
+    color:aqua;
+    transform: rotate(5deg);
+}
+
+.section-presentation{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 10px;
+}
+.section-presentation__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+.image__img{
+    width: 500px;
+    height: 500px;
+    border-radius: 80px;
+}
+.section-presentation__content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: black;
+    color:white
+}
+.section-presentation__content:hover{
+    color:gray
+}
+.content__div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content__div:hover{
+    background-color: aqua;
+}
+
+.header a{
+    text-decoration: none;
+    color: red;
+}
+.header a:hover{
+    color: aqua;
+}
+
+
+/* ================================
+   Responsive Design
+================================ */
+
+/* Tablet screens and smaller (≤768px) */
+@media (max-width: 768px) {
+    /* Switch to 2-column layout */
+    .section-presentation {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px;
+    }
+    .header{
+        padding: 10px 50px;
+        width: 90%;
+    }
+    .content__paragraph{
+        font-size: 10px;
+    }
+    .content__div{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+}
+
+
+
+/* Mobile screens and smaller (≤480px) */
+@media (max-width: 480px) {
+    /* Switch to 2-column layout */
+    .section-presentation {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px;
+    }
+    .header{
+        padding: 10px 50px;
+        width: 90%;
+    }
+    .content__paragraph{
+        font-size: 10px;
+    }
+    .content__div{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+}
